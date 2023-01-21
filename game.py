@@ -29,10 +29,9 @@ def screen_capture():
     roi_search = cv2.selectROI("select the search roi", game_screen)
     cv2.destroyAllWindows()
     # load our enemy template
-    enemy1 = cv2.imread('resources/enemies/enemy_1.png')
+    enemy1 = cv2.imread("resources/enemies/enemy_1.png")
     enemy1 = cv2.cvtColor(enemy1, cv2.COLOR_RGB2GRAY)
     (tH, tW) = enemy1.shape[:2]
-
     while(True):
         # for viewing convienice we will have our view window being shown
         # and we will draw rectangles around enemies in the window
